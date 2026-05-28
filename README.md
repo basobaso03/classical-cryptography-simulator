@@ -37,13 +37,13 @@ This project was developed under the DecodeLabs Cyber Security Program to showca
 This is a monoalphabetic substitution cipher where each letter in the plaintext is shifted a fixed number of positions down the alphabet.
 * **Encryption Formula**: $E_n(x) = (x + n) \pmod{26}$
 * **Decryption Formula**: $D_n(x) = (x - n) \pmod{26}$
-*(where x is the letter code between 0 and 25 and $ is the shift key)*
+*(where x is the letter code between 0 and 25 and n is the shift key)*
 
 ### Vigenere Cipher
 This uses a keyword where each letter of the keyword represents a different Caesar shift value. The keyword repeats to cover the length of the plaintext.
 * **Encryption Formula**: $C_i = (P_i + K_i) \pmod{26}$
 * **Decryption Formula**: $P_i = (C_i - K_i) \pmod{26}$
-*(where Pi is the plaintext letter, Ci is the ciphertext letter, and Ki is the corresponding key letter shift)*
+*(where P_i is the plaintext letter, C_i is the ciphertext letter, and K_i is the corresponding key letter shift)*
 
 ## Project Structure
 ```text
