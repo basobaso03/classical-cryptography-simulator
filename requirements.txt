@@ -1,0 +1,15 @@
+# DecodeLabs Cyber Security Project 2
+# Requirements and Dependencies
+
+# No external dependencies required!
+# This project uses only Python standard library
+
+# Python Version: 3.6+
+# Built-in modules used:
+#   - sys (system-specific parameters)
+#   - os (operating system interface)
+
+# For development and testing:
+# (Optional for IDE support)
+# - pytest>=6.0  # For advanced testing
+# - coverage     # For test coverage analysis

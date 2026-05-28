@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecodeLabs | Marlvin Basera | Cyber Security Project 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="header-brand">
+                <a href="index.html" class="logo">DecodeLabs</a>
+                <div class="header-subtitle">Marlvin Basera | Cyber Security Project 2</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <h1>🔐 Encryption & Decryption</h1>
+            <p>Master the fundamentals of cryptography with interactive Caesar and Vigenère Cipher tools</p>
+        </section>
+
+        <!-- Main Content -->
+        <div id="main">
+            <div class="main-content">
+                <!-- Caesar Cipher Card -->
+                <div class="card">
+                    <div class="card-title">🔑 Caesar Cipher</div>
+                    
+                    <div class="form-group">
+                        <label for="caesar-plaintext">Plaintext</label>
+                        <textarea id="caesar-plaintext" placeholder="Enter text to encrypt...">Hello World</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="caesar-shift">Shift Value: <span class="range-value" id="shift-display">3</span></label>
+                        <input type="range" id="caesar-shift" min="0" max="25" value="3" oninput="updateShiftDisplay(this.value)">
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn-primary" onclick="caesarEncrypt()">Encrypt 🔒</button>
+                        <button class="btn-secondary" onclick="caesarDecrypt()">Decrypt 🔓</button>
+                        <button class="btn-secondary" onclick="caesarBruteforce()">Brute Force 💥</button>
+                    </div>
+
+                    <!-- Encryption Output -->
+                    <div class="output-section" id="caesar-encrypt-output">
+                        <div class="output-label">Encrypted Text</div>
+                        <div class="output-text" id="caesar-encrypted-text"></div>
+                        <button class="copy-btn" onclick="copyToClipboard('caesar-encrypted-text', this)">Copy</button>
+                        <div style="clear: both;"></div>
+                    </div>
+
+                    <!-- Decryption Output -->
+                    <div class="output-section" id="caesar-decrypt-output">
+                        <div class="output-label">Decrypted Text</div>
+                        <div class="output-text" id="caesar-decrypted-text"></div>
+                        <button class="copy-btn" onclick="copyToClipboard('caesar-decrypted-text', this)">Copy</button>
+                        <div id="caesar-verify" style="clear: both;"></div>
+                    </div>
+
+                    <!-- Brute Force Output -->
+                    <div class="output-section" id="caesar-bruteforce-output">
+                        <div class="output-label">All Possible Decryptions (Shift 0-25)</div>
+                        <div class="bruteforce-results" id="caesar-bruteforce-results"></div>
+                    </div>
+                </div>
+
+                <!-- Vigenère Cipher Card -->
+                <div class="card">
+                    <div class="card-title">🔑 Vigenère Cipher</div>
+                    
+                    <div class="form-group">
+                        <label for="vigenere-plaintext">Plaintext</label>
+                        <textarea id="vigenere-plaintext" placeholder="Enter text to encrypt...">Cyber Security</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vigenere-key">Encryption Key</label>
+                        <input type="text" id="vigenere-key" placeholder="Enter key (letters only)..." value="DECODELABS">
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn-primary" onclick="vigenereEncrypt()">Encrypt 🔒</button>
+                        <button class="btn-secondary" onclick="vigenereDecrypt()">Decrypt 🔓</button>
+                    </div>
+
+                    <!-- Encryption Output -->
+                    <div class="output-section" id="vigenere-encrypt-output">
+                        <div class="output-label">Encrypted Text</div>
+                        <div class="output-text" id="vigenere-encrypted-text"></div>
+                        <button class="copy-btn" onclick="copyToClipboard('vigenere-encrypted-text', this)">Copy</button>
+                        <div style="clear: both;"></div>
+                    </div>
+
+                    <!-- Decryption Output -->
+                    <div class="output-section" id="vigenere-decrypt-output">
+                        <div class="output-label">Decrypted Text</div>
+                        <div class="output-text" id="vigenere-decrypted-text"></div>
+                        <button class="copy-btn" onclick="copyToClipboard('vigenere-decrypted-text', this)">Copy</button>
+                        <div id="vigenere-verify" style="clear: both;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>🛡️ DecodeLabs Cyber Security Project 2 - Basic Encryption & Decryption</p>
+        <p>Basera Marlvin | © 2026 DecodeLabs</p>
+        <p>
+            📧 <a href="mailto:decodelabs.tech@gmail.com">decodelabs.tech@gmail.com</a> | 
+            🌎 <a href="https://www.decodelabs.tech" target="_blank">www.decodelabs.tech</a>
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/ciphers.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
