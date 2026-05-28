@@ -3,6 +3,7 @@
 An interactive educational simulator for classical cryptography. This application demonstrates key cryptographic concepts through a Python CLI and a fully responsive web-based interface. The project focuses on character-level transformations, key-based polyalphabetic encryption, validation logic, and unit testing.
 
 A live interactive demo can be launched by hosting the static web files on GitHub Pages.
+🚀 **Live Demo**: [Try the Interactive Simulator here!](https://basobaso03.github.io/classical-cryptography-simulator/web/index.html)
 
 ## Table of Contents
 - [Overview](#overview)
